@@ -3,7 +3,7 @@ function [x,P,K] = EKF_quadrotor(x,u,dt,y,P,Q,R)
 fstate = @quadrotor;
 % hmeas = @(x,u,dt)[x(:)]; 
 % hmeas = @(x,u,dt)[x(1:7); x(9); x(11)]; % with GPS coordinates
-hmeas = @(x,u,dt)[x(1:6)]; % without GPS coordinates
+hmeas = @(x,u,dt)[x(1:12)]; % without GPS coordinates
 
 % for nonlinear dynamic system:
 %           x_k+1 = f(x_k) + w_k
